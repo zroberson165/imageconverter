@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "imgconvert"
-version = "0.2.0"
-dependencies = ["click", "Pillow", "pillow-heif"]
+version = "0.2.1"
+dependencies = ["click", "Pillow", "pillow-heif", "rawpy", "numpy"]
 
 [project.scripts]
 imgconvert = "script:main"

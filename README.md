@@ -1,22 +1,32 @@
 # imageconverter
-simple script to batch convert images
 
-### To Run (After Install)
+A command line tool to batch convert, compress, and resize images.
+Supports HEIC, JPG, PNG, and RAW formats (NEF, CR2, ARW).
 
-imgconvert (followed by the arguments listed below)
+## Installation
 
---input /inputpath --output /outputpath --format .typeofformat --quality (default is 75) --resize resizepercentage (optional) --recursive (if you add this it will go through subdirectories and convert)
-
-optionally run imgconvert --help and it should provide you with setting options
-
-### To Install
-
-You need python and pip installed (or can run python3 -m pip ...)
-
-Then, in terminal run:
-
+Requires Python and pip.
+```bash
 git clone https://github.com/zroberson165/imageconverter
-
 cd imageconverter
+pip install .
+```
 
-pip install . (or python3 -m pip install .)
+## Usage
+```bash
+imgconvert --input /path/to/images --output /path/to/save --format .jpg
+```
+
+## Options
+
+| Flag | Description | Required |
+|------|-------------|----------|
+| `--input` | Folder of images to convert | Yes |
+| `--output` | Folder to save converted images | Yes |
+| `--format` | Output format (.jpg, .png, .jpeg) | Yes |
+| `--quality` | Output quality 0-100 | No |
+| `--resize` | Resize by percentage e.g. 50 for 50% | No |
+| `--recursive` | Process subfolders | No |
+| `--recommend` | Analyze images and suggest settings | No |
+
+Run `imgconvert --help` for a full list of options.
